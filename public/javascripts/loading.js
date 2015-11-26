@@ -30,4 +30,4 @@ function init(){
 		});
 	}, 3000);
 }
-// init();
+init();
