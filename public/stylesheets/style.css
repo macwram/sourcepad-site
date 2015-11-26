@@ -1,0 +1,217 @@
+@font-face {
+	font-family: 'icomoon';
+	src:url('../fonts/icomoon.eot?tyxd2v');
+	src:url('../fonts/icomoon.eot?tyxd2v#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?tyxd2v') format('truetype'),
+		url('../fonts/icomoon.woff?tyxd2v') format('woff'),
+		url('../fonts/icomoon.svg?tyxd2v#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-facebook:before {
+	content: "\e900";
+}
+.icon-twitter:before {
+	content: "\e901";
+}
+.icon-linkedin2:before {
+	content: "\e902";
+}
+
+
+
+html, body{
+	width: 100%;
+	height: 100%;
+}
+body {
+  font: 19px "Lato", Helvetica, Arial, sans-serif;
+  color: #40413d;
+  letter-spacing: .6px;
+  margin: 10;
+  font-weight: 300;
+  line-height: 1.5;
+}
+a:hover{
+	text-decoration: none;
+}
+.fleft > div{
+	float:left;
+}
+.fright > div{
+	float: right;
+}
+.square {
+	position: relative;
+    box-shadow:0px 0px 0px 1.5vw #fff inset;
+    overflow:hidden;
+    background: no-repeat scroll center center / cover  rgba(0, 0, 0, 0);
+    opacity: .5;
+    transition:opacity 0.5s linear;
+}
+.square:hover {
+	cursor: pointer;
+    opacity: 1;
+}
+.square:hover .content {
+    opacity: 1 !important;
+}
+.square .content {
+    position: absolute;
+    height: 25%;
+    width: 100%;
+    margin: 75% 0 0 0;
+    padding: 0 5%;
+    text-align: center;
+    background: rgba(255,255,255,.75);
+    transition:opacity 0.5s linear;
+    opacity: 0;
+}
+.square.sp50 .content{
+	height: 50%;
+	margin-top: 25%;
+}
+.square.s25 .content{
+	height: 50%;
+	margin-top: 50%;
+}
+.square.s25 .content .sub{
+	font-size: 13px;
+} 
+.square .content .title{
+	font-size: 3vw;
+	font-weight: 900;
+	color:#000;
+}
+.niche{
+	background-image: url('/images/niche.png')
+}
+.trueandco{
+	background-image: url('/images/trueandco.png')
+}
+.theweek{
+	background-image: url('/images/theweek.png')
+}
+.flexport{
+	background-image: url('/images/flexport.png')
+}
+.museum{
+	background-image: url('/images/museum.png')
+}
+.eneighbor{
+	background-image: url('/images/eneighbor.png')
+}
+.wizpert{
+	background-image: url('/images/wizpert.png')
+}
+.tengrade{
+	background-image: url('/images/tengrade.png')
+}
+.s50{
+	width: 50%;
+	padding-bottom: 50%;
+}
+.s25{
+	width: 25%;
+	padding-bottom: 25%;
+}
+.sp50{
+	padding-bottom: 25%;
+}
+.btn{
+	border: 0;
+	border-radius: 0;
+	padding:1vw 2vw;
+	text-transform: uppercase;
+	font-weight: 700;
+}
+.btn-lg{
+	padding:1.5vw 2.5vw;
+}
+.btn-md{
+	padding:.7vw 1.3vw;
+}
+.btn-default{
+	background: #f3f3f3;
+	color: #1d83c6;
+}
+.btn-default:hover{
+	background: #1d83c6;
+	color: #fff;
+}
+.navbar-default{
+	background: #fff;
+	border: 0;
+}
+.navbar-brand{
+	padding: 15px 0;
+	width: 161px;
+}
+.navbar-default .navbar-nav > li > a{
+	color: inherit;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 13px;
+	margin-left: 50px;
+}
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li.active > a{
+	background: #f3f3f3;
+}
+.th{
+	transition:opacity 0.5s linear;
+}
+.banner{
+	position: absolute;
+	width: 25%;
+	background: #40413d;
+	right: 0;
+	text-align: center;
+	padding:15px 10px;
+	line-height: 1;
+	box-shadow: 0px 5px 9.5px 0.5px rgba(99, 99, 99, 0.5);
+	color: #fff;
+	font-size: 17px
+}
+.banner:hover{
+	box-shadow: 0px 5px 9.5px 0.5px rgba(99, 99, 99, 0.9);
+	color:#fff;
+}
+/*  */
+h1{
+	font-weight: 700;
+}
+.fs5{
+	font-size: 5vw;
+}
+.ptop20{
+	padding-top: 20px;
+}
+.ptop100{
+	padding-top: 100px;
+}
+.pbtm20{
+	padding-bottom: 20px;
+}
+.pbtm60{
+	padding-bottom: 60px;
+}
+.mlft20{
+	margin-left: 20px;
+}

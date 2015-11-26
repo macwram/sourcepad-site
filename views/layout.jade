@@ -1,0 +1,44 @@
+doctype html
+html
+	head
+		meta( name="viewport" content="initial-scale=1, maximum-scale=1")
+		title= title
+			|  | SourcePad
+		link(rel='stylesheet', href='/bower_components/bootstrap/dist/css/bootstrap.css')
+		link(rel='stylesheet', href='/stylesheets/style.css')
+	body.container
+		nav.ptop20.th(class="navbar navbar-default")
+			div(class="navbar-header")
+				button(type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar")
+					span(class="sr-only") Toggle navigation
+					span(class="icon-bar")
+					span(class="icon-bar")
+					span(class="icon-bar")
+				a(class="navbar-brand" href="/")
+					img(alt="SourcePad" src="/images/logo.png")
+			div#navbar(class="collapse navbar-collapse" aria-expanded="false")
+				ul(class="nav navbar-nav navbar-right")
+					li
+						a(href="#") About
+					li
+						a(href="#") Career
+					li
+						a(href="#") Contact
+					li
+						a(href="#") News
+	
+		block content
+		footer.footer.pbtm20.th.ptop100
+			.container
+				.col-md-12.text-center.pbtm60
+					a.btn.btn-lg.btn-default Get In Touch
+				.col-md-6
+					.text-muted &copy; 2015 SourcePad
+				.col-md-6.text-right
+					a.btn.btn-default.btn-md Contact Us
+					a.mlft20.icon-facebook
+					a.mlft20.icon-twitter
+					a.mlft20.icon-linkedin2
+		script(src="/bower_components/jquery/dist/jquery.js")
+		script(src="/bower_components/bootstrap/dist/js/bootstrap.js")
+		block script
