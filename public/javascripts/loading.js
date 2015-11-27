@@ -10,11 +10,11 @@ function replaceAt(s, n, t){
 }
 
 function init(){
+	$("html,body").scrollTop(0);
 	var string = "We Build Ideas"
-
 	$('.th').css('opacity', '0')
 	$('body').css('overflow', 'hidden')
-	$(window).scrollTop(0)
+	
 
 	var t= setInterval(function(){
 		$('.loading').html(replaceAt(replaceAt(random(string.length), 2, ' '),8, ' '))
@@ -30,4 +30,4 @@ function init(){
 		});
 	}, 3000);
 }
-init();
+// init();

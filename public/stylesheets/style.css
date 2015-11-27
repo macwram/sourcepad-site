@@ -193,12 +193,40 @@ a:hover{
 	box-shadow: 0px 5px 9.5px 0.5px rgba(99, 99, 99, 0.9);
 	color:#fff;
 }
+.new .title{
+	font-size: 2vw;
+	font-weight: 500;
+	color: #40413d;
+}
+.new .title a{
+	color: #40413d;
+}
+.new .title a:hover{
+	color: #1d83c6;
+}
+.new .details{
+	font-size: 15px;
+}
+.new .thumbnail{
+	width: 100%;
+	height: 150px;
+	background: gray;
+	padding:0;
+	margin-top: 10px;
+
+}
 /*  */
 h1{
 	font-weight: 700;
 }
 .fs5{
 	font-size: 5vw;
+}
+.fs3{
+	font-size: 3vw;
+}
+.ptop10{
+	padding-top: 10px;
 }
 .ptop20{
 	padding-top: 20px;
@@ -208,6 +236,12 @@ h1{
 }
 .pbtm20{
 	padding-bottom: 20px;
+}
+.pbtm10{
+	padding-bottom: 10px;
+}
+.pbtm40{
+	padding-bottom: 40px;
 }
 .pbtm60{
 	padding-bottom: 60px;
