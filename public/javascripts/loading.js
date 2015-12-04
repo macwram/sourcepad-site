@@ -52,3 +52,12 @@ function init(){
 }
 init();
 
+
+// should me moved to another page
+$('.down-arrow').on('click', function(){
+	 $('html, body').animate({
+        scrollTop: $(".clients").offset().top - 50
+    }, 1000);
+
+});
+

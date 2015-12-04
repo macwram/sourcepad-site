@@ -1,3 +1,6 @@
+.th{
+	opacity: 0;
+}
 @font-face {
 	font-family: 'icomoon';
 	src:url('../fonts/icomoon.eot?tyxd2v');
@@ -108,7 +111,7 @@ a:hover{
 	background-image: url('/images/niche logo.png')
 }
 .content{
-	height: 90vh
+	height: 80vh
 }
 .niche{
 	background-image: url('/images/niche.png')
@@ -228,8 +231,65 @@ a:hover{
 	background: gray;
 	padding:0;
 	margin-top: 10px;
-
 }
+.sub{
+	font-size: 23px;
+}
+.down-arrow{
+	font-size: 30px;
+	pointer:cursor;
+	-moz-animation: bounce 2s infinite;
+	-webkit-animation: bounce 2s infinite;
+	animation: bounce 2s infinite;
+}
+/*@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}*/
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+  60% {
+    -webkit-transform: translateY(-7px);
+    transform: translateY(-7px);
+  }
+}/*
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -webkit-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -webkit-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}*/
 /*  */
 .txt-w{
 	color: #fff;
@@ -311,5 +371,15 @@ h1{
 }
 .navbar-default .navbar-toggle{
 	border:0;
+}
+.navbar-nav{
+	text-align: right;
+	z-index: 5;
+	background: #fff;
+	opacity: 1;
+
+}
+.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+	border: none;
 }
 }
