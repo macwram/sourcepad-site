@@ -252,8 +252,9 @@ a:hover{
 	font-size: 23px;
 }
 .down-arrow{
-	font-size: 30px;
+	font-size: 60px;
 	cursor:pointer;
+	color:#40413d;
 	display: inline-block;
     *display: inline; /* Used to get IE 6 & 7 to behave */
     zoom: 1; /* Used to get IE 6 & 7 to behave */
@@ -363,8 +364,8 @@ h1{
 .mtop20{
 	margin-top: 20px;
 }
-.mtop-50{
-	margin-top: -50px;
+.mtop-100{
+	margin-top: -100px;
 }
 .mno{
 	margin: 0
