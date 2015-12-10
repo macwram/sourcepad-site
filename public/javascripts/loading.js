@@ -15,7 +15,6 @@ function randstringnum(string){
 	return Math.floor((Math.random()*string.length) + 1)
 }
 function finish(string){
-	
 	$('.loading').html(string).promise().done(function(){
 		setInterval(function(){
 			$('.th').css('opacity', '1')
@@ -23,14 +22,13 @@ function finish(string){
 			setTimeout(function(){
 		    	$('.down-arrow').addClass('bounce')
 		    }, 1500);
-		}, 3000);
+		}, 1200);
 	});
 }
 function replacestring(newstring, rands, string){
 	$.each(rands, function(i, x){
 		newstring = replaceAt(newstring, x, string.charAt(x))
 	})
-	console.log(newstring)
 	return newstring
 }
 function five(rands,string){
@@ -111,5 +109,20 @@ $('.down-arrow').on('click', function(){
         scrollTop: $(".clients").offset().top - 50
     }, 1000);
 
+});
+
+window.addEventListener("scroll", function(event) {
+    var top = this.scrollY,
+        left =this.scrollX;
+        // console.log(top)
+}, false);
+
+$(window).scroll(function (event) {
+    var scroll = $(window).scrollTop();
+	if(scroll > 100){
+		$('.down-arrow').fadeOut('slow')
+	}else{
+		$('.down-arrow').fadeIn('fast')
+	}
 });
 
