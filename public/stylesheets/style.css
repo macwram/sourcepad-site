@@ -1,5 +1,6 @@
 .th{
 	opacity: 0;
+	transition:opacity 2.5s linear;
 }
 @font-face {
 	font-family: 'icomoon';
@@ -208,9 +209,6 @@ a:hover{
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li.active > a{
 	background: #f3f3f3;
-}
-.th{
-	transition:opacity 0.5s linear;
 }
 .banner{
 	position: absolute;
