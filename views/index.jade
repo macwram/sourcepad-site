@@ -1,46 +1,56 @@
 extends layout
 
 block content
-	a.th.banner(href="http://niche.co" target="_blank") SourcePad client Niche acquired by Twitter for $30 million
-	.content.ptop100.text-center.row
+	a.th.banner(href="http://niche.co" target="_blank")
+		span SourcePad client Niche acquired
+		br
+		span by Twitter for $30 million
+	.content.text-center.row
 		//- .col-md-offset-1.col-md-10.th Bringing an idea into the marketplace is hard work. It’s also extremely rewarding. At SourcePad, we’ve worked with 100+ businesses to do just that. So, whether you’re bootstrapped, seed/VC funded or profit positive, we can help. Oh, and we love this stuff.
 		.col-md-offset-1.col-md-10
-			h1.fs5.loading We Build Ideas
-			p.sub.th.mtop20 Since 2008, we’ve built web and mobile applications for 100+ businesses.
-	.row.text-center.th
-		a.down-arrow.glyphicon.glyphicon-chevron-down
-	.portfolio.ptop100.th
-		h2.text-center.fs3.pbtm40.row.clients We work with great clients
-		.row.fleft
-			.square.s50.niche
-				.content.hide
-					a view project
-				.content
-					img(src='/images/niche logo.png')
-					.sub.mtop20.plr20.txt-w Since 2008, we’ve built web and mobile applications for 100+ businesses.
-			.square.s50.sp50.theweek
-				.content
-					img(src='/images/theweek logo.png')
-			.square.s25.museum
-				.content
-					img(src='/images/museum logo.png')
-			.square.s25.eneighbor
-				.content
-					img(src='/images/eneighbr logo.png')
-		.row.fright
-			.square.s50.trueandco
-				.content
-					img(src='/images/trueandco logo.png')
-					.sub.mtop20.plr20 Since 2008, we’ve built web and mobile applications for 100+ businesses.
-			.square.s50.sp50.flexport
-				.content
-					img(src='/images/flexport logo.png')
-			.square.s25.wizpert
-				.content
-					img(src='/images/wizpert logo.png')
-			.square.s25.tengrade
-				.content
-					img(src='/images/tengrade logo.png')
+			.loadingdiv
+				h1.fs5.mno.th.loading We Build Ideas
+				p.sub.th.mtop20 
+					span We’ve built web and mobile applications
+					br
+					span for 100+ companies since 2008.
+	.clearfix.mtop-50
+	.row.text-center.th.mtop-50.col-md-12
+		a.down-arrow.glyphicon.glyphicon-chevron-down.bounce
+	.row
+		.portfolio.ptop100.th.col-md-offset-1.col-md-10
+			h2.text-center.fs3.pbtm40.row.clients We work with great clients
+			.row.fleft
+				.square.s50.niche
+					.content.hide
+						a view project
+					.content
+						img(src='/images/niche logo.png')
+						.sub.mtop20.plr20.txt-w Since 2008, we’ve built web and mobile applications for 100+ businesses.
+				.square.s50.sp50.theweek
+					.content
+						img(src='/images/theweek logo.png')
+				.square.s25.museum
+					.content
+						img(src='/images/museum logo.png')
+				.square.s25.eneighbor
+					.content
+						img(src='/images/eneighbr logo.png')
+			.row.fright
+				.square.s50.trueandco
+					.content
+						img(src='/images/trueandco logo.png')
+						.sub.mtop20.plr20 Since 2008, we’ve built web and mobile applications for 100+ businesses.
+				.square.s50.sp50.flexport
+					.content
+						img(src='/images/flexport logo.png')
+				.square.s25.wizpert
+					.content
+						img(src='/images/wizpert logo.png')
+				.square.s25.tengrade
+					.content
+						img(src='/images/tengrade logo.png')
+	
 	.news.th.ptop100
 		h2.text-center.fs3.pbtm40.row Latest News
 		.new.pbtm40.col-md-10.col-md-offset-1
