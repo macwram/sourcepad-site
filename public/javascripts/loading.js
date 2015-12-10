@@ -121,8 +121,6 @@ $(window).scroll(function (event) {
     var scroll = $(window).scrollTop();
 	if(scroll > 100){
 		$('.down-arrow').fadeOut('slow')
-	}else{
-		$('.down-arrow').fadeIn('fast')
 	}
 });
 
