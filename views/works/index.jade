@@ -1,0 +1,52 @@
+extends ../layout
+
+block content
+	.plr10.text-center.works
+		h2.fs3.pbtm40.ptop50 Works
+		p Having great taste is one of the most important characteristics of designers, programmers, and managers alike. Being able to discern what’s good from that which is bad
+
+		.nav-center
+			ul.nav.nav-pills.ptop100(role='tablist')
+				li.active(role='presentation')
+					a(href='#all', aria-controls='all', role='tab', data-toggle='tab') All
+				li(role='presentation')
+					a(href='#web', aria-controls='web', role='tab', data-toggle='tab') Web
+				li(role='presentation')
+					a(href='#mobile', aria-controls='mobile', role='tab', data-toggle='tab') Mobile
+		.tab-content.ptop50
+			#all.tab-pane.active(role='tabpanel')
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+			#web.tab-pane(role='tabpanel')
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+			#mobile.tab-pane(role='tabpanel')
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+				.col-md-6.p1p
+					a.work
+
+block script
+	script(src="/javascripts/sample.js")
