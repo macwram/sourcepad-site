@@ -1,5 +1,6 @@
 extends layout
-
+block css
+	link(rel='stylesheet', href='/stylesheets/homepage.css')
 block content
 	a.th.banner.fw400(href="http://niche.co" target="_blank")
 		span SourcePad client Niche acquired
@@ -9,11 +10,12 @@ block content
 		//- .col-md-offset-1.col-md-10.th Bringing an idea into the marketplace is hard work. It’s also extremely rewarding. At SourcePad, we’ve worked with 100+ businesses to do just that. So, whether you’re bootstrapped, seed/VC funded or profit positive, we can help. Oh, and we love this stuff.
 		.col-md-offset-1.col-md-10
 			.loadingdiv
-				h1.fs5.mno.th.loading We Build Ideas
+				h1.fs5.mno.th.loading#load We Build Ideas
 				p.sub.th.mtop20.fw400
 					span We’ve built web and mobile applications
 					br
 					span for 100+ companies since 2008.
+	script(src="/javascripts/loading.animation.js")
 	.clearfix.mtop-50
 	.row.text-center.th.mtop-100.col-md-12
 		a.down-arrow.bounce ^
@@ -93,4 +95,4 @@ block content
 
 
 block script
-	script(src="/javascripts/loading.js")
+	script(src="/javascripts/index.js")

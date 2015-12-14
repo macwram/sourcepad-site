@@ -1,10 +1,4 @@
-function random(num){
-    var text = "";
-    var possible = "!@+=][}{|;:.<>,?/#$%^&*()-+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-    for( var i=0; i < num; i++ )
-        text += possible.charAt(Math.floor(Math.random() * possible.length));
-    return text;
-}
+
 function replaceAt(s, n, t){
     return s.substring(0, n) + t + s.substring(n + 1);
 }
@@ -104,23 +98,5 @@ init();
 
 
 // should me moved to another page
-$('.down-arrow').on('click', function(){
-	 $('html, body').animate({
-        scrollTop: $(".clients").offset().top - 50
-    }, 1000);
 
-});
-
-window.addEventListener("scroll", function(event) {
-    var top = this.scrollY,
-        left =this.scrollX;
-        // console.log(top)
-}, false);
-
-$(window).scroll(function (event) {
-    var scroll = $(window).scrollTop();
-	if(scroll > 100){
-		$('.down-arrow').fadeOut('slow')
-	}
-});
 
