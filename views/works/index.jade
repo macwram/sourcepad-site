@@ -15,35 +15,16 @@ block content
 					a(href='#mobile', aria-controls='mobile', role='tab', data-toggle='tab') Mobile
 		.tab-content.ptop50
 			#all.tab-pane.active(role='tabpanel')
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
+				each work, i in works
+					.col-md-6.p1p
+						a.work(style="background-image:url(/images/works/"+work.title+"1.jpg)" href="works/"+work.title)
 			#web.tab-pane(role='tabpanel')
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
+				each work, i in works
+					if work.type == 1
+						.col-md-6.p1p
+							a.work(style="background-image:url(/images/works/"+work.title+"1.jpg)" href="works/"+work.title)
 			#mobile.tab-pane(role='tabpanel')
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
-				.col-md-6.p1p
-					a.work
+				each work, i in works
+					if work.type == 2
+						.col-md-6.p1p
+							a.work= work.name

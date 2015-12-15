@@ -1,12 +1,18 @@
 var express = require('express');
 var router = express.Router();
 var works = require('../data/works')
-/* GET home page. */
+
 router.get('/', function(req, res, next) {
-	res.render('index', { title: 'Home', works:works });
+	var allworks = [];
+	for(var i=0; i < works.length; i++ ){
+		if(works[i].main){
+			allworks.push(works[i])
+		}
+	}
+	res.render('index', { title: 'Home', works:allworks });
 });
 router.get('/works', function(req, res, next) {
-	res.render('works/index', { title: 'Works' });
+	res.render('works/index', { title: 'Works', works:works });
 });
 router.get('/works/:work', function(req, res, next){
 	var work;
