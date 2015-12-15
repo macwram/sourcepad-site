@@ -1,0 +1,12 @@
+.single{
+	background: no-repeat scroll center center / cover  rgba(0, 0, 0, 0);
+	transition: all .5s ease;
+}
+.square{
+	background-size:cover;
+	transition: all .5s ease;
+	opacity: .3;
+}
+.square.active, .square:hover{
+	opacity: 1
+}

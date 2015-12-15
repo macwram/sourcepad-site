@@ -1,102 +1,65 @@
+var d =			document,
+	string =	"We Build Ideas",
+	l = d.getElementById("load"),
+	rands = [],
+	bo = d.body.style
 
+function random(num){
+    var text = "";
+    var possible = "!@+=][}{|;:.<>,?/#$%^&*()-+ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for( var i=0; i < num; i++ )
+        text += possible.charAt(Math.floor(Math.random() * possible.length));
+    return text;
+}
 function replaceAt(s, n, t){
     return s.substring(0, n) + t + s.substring(n + 1);
 }
 function randomstring(string){
 	return replaceAt(replaceAt(random(string.length), 2, ' '),8, ' ')
 }
-function randstringnum(string){
-	return Math.floor((Math.random()*string.length) + 1)
-}
-function finish(string){
-	$('.loading').html(string).promise().done(function(){
-		setInterval(function(){
-			$('.th').css('opacity', '1')
-			$('body').css('overflow', 'scroll')
-			setTimeout(function(){
-		    	$('.down-arrow').addClass('bounce')
-		    }, 1500);
-		}, 1200);
-	});
-}
-function replacestring(newstring, rands, string){
-	$.each(rands, function(i, x){
-		newstring = replaceAt(newstring, x, string.charAt(x))
-	})
+function replacestring(newstring, rands){
+	for (i = 0; i < rands.length; i++) {
+		newstring = replaceAt(newstring, rands[i], string.charAt(rands[i]))
+	}
 	return newstring
 }
-function five(rands,string){
+function timeout(array, callback){
 	setTimeout(function(){
-    	rands.push(11)
-    	rands.push(13)
-        $('.loading').html(replacestring(randomstring(string), rands, string))
-        finish(string);
+		array.forEach(function(arr){
+			rands.push(arr)
+		})
+    	l.innerHTML = replacestring(randomstring(string), rands)
+        callback()
     }, 300);
 }
-function four(rands,string){
+function done(){
 	setTimeout(function(){
-    	rands.push(9)
-    	rands.push(10)
-    	rands.push(12)
-        $('.loading').html(replacestring(randomstring(string), rands, string))
-        five(rands, string);
-    }, 300);
-}
-function three(rands,string){
-	setTimeout(function(){
-    	rands.push(5)
-    	rands.push(7)
-        $('.loading').html(replacestring(randomstring(string), rands, string))
-        four(rands, string);
-    }, 300);
-}
-function two(rands,string){
-	setTimeout(function(){
-    	rands.push(3)
-    	rands.push(4)
-    	rands.push(6)
-        $('.loading').html(replacestring(randomstring(string), rands, string))
-        three(rands, string);
-    }, 300);
-}
-function one(rands,string){
-    setTimeout(function(){
-    	rands.push(0)
-    	rands.push(1)
-        $('.loading').html(replacestring(randomstring(string), rands, string))
-        two(rands, string);
-    }, 300);
-}
-
-
-function init(){
-	$("html,body").scrollTop(0);
-	var string = "We Build Ideas"
-	$('.th').css('opacity', '0');
-	$('.loading').html('').removeClass('th').css('opacity', '1');
-	$('body').css('overflow', 'hidden')
-	var rands = []
-
-	// var t= setInterval(function(){
-	// 	var n = 0
-	// 	while (n < 3) {
-	// 		rands.push(randstringnum(string))
-	// 		rands.push(0)
-	// 		n++;
-	// 	}
-	// 	$('.loading').html(replacestring(randomstring(string), rands, string))
-	// }, 400);
-	$('.loading').html(replacestring(randomstring(string), rands, string))
-	one(rands, string);
-
-	setInterval(function(){
-		// clearInterval(t);
+		var ths = d.getElementsByClassName('th')
+		for (i = 0; i < ths.length; i++) {
+			ths[i].style.opacity = '1'
+		}
 		
-	}, 3000);
+		bo.overflow = 'scroll'
+	}, 1200);
+}
+function init(){
+	window.onbeforeunload = function(){
+		window.scrollTo(0,0);
+	}
+	l.innerHTML = replacestring(randomstring(string), rands)
+	l.style.opacity = '1'
+	bo.overflow = 'hidden'
+	timeout([0,1], function(){
+		timeout([3,4,6], function(){
+			timeout([5,7], function(){
+				timeout([9,10,12], function(){
+					timeout([11,13], function(){
+						done()
+					})
+				})
+			})
+		})
+	})
 }
 init();
-
-
-// should me moved to another page
-
-
+// done();

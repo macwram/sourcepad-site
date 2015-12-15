@@ -1,20 +1,24 @@
 extends ../layout
-
+block css
+	link(rel='stylesheet', href='/stylesheets/works.show.css')
 block content
 	.plr10.works
-		h2.text-center.fs3.pbtm40.ptop50= title
+		h2.text-center.fs3.pbtm40.ptop50= work.name
 
-		.col-md-12.single
+		.col-md-12.single(style="background-image:url(/images/works/"+work.title+"1.jpg)")
 		.clearfix
-		.col-md-12.fleft.pno
-			.square.s10
-			.square.s10
+		.col-md-12.fleft.pno.thumb
+			- var i = 0
+			while i < work.screenshots
+				.square.s10(style="background-image:url(/images/works/"+work.title+(i+1)+".jpg)")
+				-i++
 		.clearfix
 		.desc.ptop50
 			p Having great taste is one of the most important characteristics of designers, programmers, and managers alike. Being able to discern what’s good from that which is important characteristics of designers, programmers, and managers alike. Being able to discern what’s good from that which
 			p If the most important characteristics of designers, programmers, and managers alike. Being able to discern what’s good from that ristics of designers, programmers, and managers alike. Being able to discern what’s good from that whichristics of designers, programmers, and managers alike. Being able to discern
 		.ptop100
 		.col-md-12.pno
-			a.btn.btn-default.btn-md(href="/works") https://www.
-				= title
-				| .com
+			a.btn.btn-default.btn-md(href="http://"+work.link target="_blank") http://
+				= work.link
+block script
+	script(src='/javascripts/works.show.js')

@@ -15,52 +15,23 @@ block content
 					span We’ve built web and mobile applications
 					br
 					span for 100+ companies since 2008.
-	script(src="/javascripts/loading.animation.js")
+	script(src="/javascripts/loading.js")
 	.clearfix.mtop-50
 	.row.text-center.th.mtop-100.col-md-12
 		a.down-arrow.bounce ^
 	.row
 		.portfolio.ptop100.th.col-md-offset-1.col-md-10
 			h2.text-center.fs3.pbtm40.row.clients We work with great clients
-			.row.fleft
-				.square.s50.niche
-					a(href="works/niche")
-						.content2.text-right
-							span.label Acquired: $30m (Twitter)
+			each work, i in works
+				.square(class=work.size + ' ' + work.title)
+					a(href="works/"+work.title)
+						if work.label
+							.content2.text-right
+								span.label= work.label
 						.content
-							img(src='/images/niche logo.png')
-							.sub.mtop20.plr20.txt-w Since 2008, we’ve built web and mobile applications for 100+ businesses.
-				.square.s50.sp50.theweek
-					.content2.text-right
-						span.label 3m Monthly Visitors
-					.content
-						img(src='/images/theweek logo.png')
-				.square.s25.museum
-					.content2.text-right
-						span.label VC raised $7m
-					.content
-						img(src='/images/museum logo.png')
-				.square.s25.eneighbor
-					.content
-						img(src='/images/eneighbr logo.png')
-			.row.fright
-				.square.s50.trueandco
-					.content2.text-right
-						span.label VC raised $6m
-					.content
-						img(src='/images/trueandco logo.png')
-						.sub.mtop20.plr20.fw400 Since 2008, we’ve built web and mobile applications for 100+ businesses.
-				.square.s50.sp50.flexport
-					.content2.text-right
-						span.label VC raised $27m
-					.content
-						img(src='/images/flexport logo.png')
-				.square.s25.wizpert
-					.content
-						img(src='/images/wizpert logo.png')
-				.square.s25.tengrade
-					.content
-						img(src='/images/tengrade logo.png')
+							img(src='/images/'+work.title+' logo.png')
+							if work.sub
+								.sub.mtop20.plr20.txt-w= work.sub
 			.row.text-center.ptop100.pbtm60
 				a.btn.btn-default.btn-md(href="/works") View More
 	.news.th.ptop100
