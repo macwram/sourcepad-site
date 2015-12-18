@@ -3,6 +3,7 @@ module.exports = [
 			title: 'niche'
 			,sub: 'Since 2008, we’ve built web and mobile applications for 100+ businesses.'
 			,label: 'Acquired: $30m (Twitter)'
+			,labelcolor: 'dark'
 			,size: 's50'
 			,name: 'Niche'
 			,screenshots: 2
@@ -53,6 +54,7 @@ module.exports = [
 		,{
 			title: 'flexport'
 			,label: 'VC raised $27m'
+			,labelcolor: 'dark'
 			,size: 's50 sp50'
 			,name: 'FLEXPORT'
 			,screenshots: 3
@@ -63,7 +65,7 @@ module.exports = [
 		,{
 			title: 'wizpert'
 			,size: 's25'
-			,name: 'wizpert'
+			,name: 'Wizpert'
 			,screenshots: 3
 			,link: 'wizpert.com'
 			,type: 1

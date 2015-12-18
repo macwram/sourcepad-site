@@ -24,16 +24,16 @@ block content
 			h2.text-center.fs3.pbtm40.row.clients We work with great clients
 			each work, i in works
 				.square(class=work.size + ' ' + work.title)
-					a(href="works/"+work.title)
+					a(href="work/"+work.title)
 						if work.label
 							.content2.text-right
-								span.label= work.label
+								span.label(class=work.labelcolor)= work.label
 						.content
 							img(src='/images/'+work.title+' logo.png')
 							if work.sub
 								.sub.mtop20.plr20.txt-w= work.sub
 			.row.text-center.ptop100.pbtm60
-				a.btn.btn-default.btn-md(href="/works") View More
+				a.btn.btn-default.btn-md(href="/work") View More
 	.news.th.ptop100
 		h2.text-center.fs3.pbtm40.row Latest News
 		.new.pbtm40.col-md-10.col-md-offset-1

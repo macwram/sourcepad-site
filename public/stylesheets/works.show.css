@@ -10,3 +10,12 @@
 .square.active, .square:hover{
 	opacity: 1
 }
+
+.works .single{
+    background-color: #fff;
+}
+.single img{
+	width: 100%;
+    height: auto;
+    border: 1px solid #ecf0f1;
+}

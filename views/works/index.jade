@@ -1,8 +1,12 @@
 extends ../layout
+block css
+	link(rel='stylesheet', href='/bower_components/blueimp-gallery/css/blueimp-gallery.css')
+	link(rel='stylesheet', href='/bower_components/blueimp-bootstrap-image-gallery/css/bootstrap-image-gallery.css')
+	link(rel='stylesheet', href='/stylesheets/works.index.css')
 
 block content
 	.plr10.text-center.works
-		h2.fs3.pbtm40.ptop50 Works
+		h2.fs3.pbtm40.ptop50 Work
 		p Having great taste is one of the most important characteristics of designers, programmers, and managers alike. Being able to discern what’s good from that which is bad
 
 		.nav-center
@@ -15,16 +19,40 @@ block content
 					a(href='#mobile', aria-controls='mobile', role='tab', data-toggle='tab') Mobile
 		.tab-content.ptop50
 			#all.tab-pane.active(role='tabpanel')
-				each work, i in works
-					.col-md-6.p1p
-						a.work(style="background-image:url(/images/works/"+work.title+"1.jpg)" href="works/"+work.title)
+				.links
+					each work, i in works
+						a.col-md-6.mtop50(data-gallery href="/images/works/"+work.title+".jpg" title= work.name info="work/"+work.title link="https://"+work.link)
+							img(src="/images/works/thumb/"+work.title+".png" )
 			#web.tab-pane(role='tabpanel')
-				each work, i in works
-					if work.type == 1
-						.col-md-6.p1p
-							a.work(style="background-image:url(/images/works/"+work.title+"1.jpg)" href="works/"+work.title)
+				.links
+					each work, i in works
+						if work.type == 1
+							a.col-md-6.mtop50(data-gallery href="/images/works/"+work.title+".jpg" title= work.name info="work/"+work.title)
+								img(src="/images/works/thumb/"+work.title+".png" )
 			#mobile.tab-pane(role='tabpanel')
-				each work, i in works
-					if work.type == 2
-						.col-md-6.p1p
-							a.work= work.name
+				.links
+					each work, i in works
+						if work.type == 2
+							a.col-md-6.mtop50(data-gallery href="/images/works/"+work.title+".jpg" title= work.name info="work/"+work.title)
+								img(src="/images/works/thumb/"+work.title+".png" )
+	#blueimp-gallery.blueimp-gallery
+			.slides
+			// Controls for the borderless lightbox
+			h3.title
+			a.prev ‹
+			a.next ›
+			a.ii.icon-ellipsis
+			a.ii.icon-open(target="_blank")
+			a.close ×
+			ol.indicator
+			// The modal dialog, which will be used to wrap the lightbox content
+			.modal.fade
+				.modal-dialog
+					.modal-content
+						.modal-header
+							h4.modal-title
+						.modal-body.next
+block script
+	script(src="/bower_components/blueimp-gallery/js/blueimp-gallery.js")
+	script(src="/bower_components/blueimp-bootstrap-image-gallery/js/bootstrap-image-gallery.js")
+	script(src="/javascripts/works.index.js")

@@ -1,0 +1,39 @@
+.blueimp-gallery .modal-dialog {
+	max-width: 90vw;
+}
+.modal-content{
+	background-color: transparent;
+	box-shadow: none;
+}
+.modal-header{
+	border-bottom: 0;
+}
+.modal-title{
+	font-size: 2vw;
+	color: #fff;
+}
+.ii{
+	padding: 15px;
+    left: auto;
+    margin: -15px;
+    font-size: 22px;
+    text-decoration: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    line-height: 30px;
+    color: #fff;
+    text-shadow: 0 0 2px #000;
+    opacity: 0.8;
+    font-weight: 700;
+}
+.ii:hover{
+	color:#fff;
+	opacity: 1
+}
+.icon-open{
+	right: 60px;
+}
+.icon-ellipsis{
+	right: 100px;
+}

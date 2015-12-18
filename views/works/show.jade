@@ -5,9 +5,10 @@ block content
 	.plr10.works
 		h2.text-center.fs3.pbtm40.ptop50= work.name
 
-		.col-md-12.single(style="background-image:url(/images/works/"+work.title+"1.jpg)")
+		.col-md-12.single.pno
+			img(src="/images/works/"+work.title+".jpg")
 		.clearfix
-		.col-md-12.fleft.pno.thumb
+		//.col-md-12.fleft.pno.thumb
 			- var i = 0
 			while i < work.screenshots
 				.square.s10(style="background-image:url(/images/works/"+work.title+(i+1)+".jpg)")

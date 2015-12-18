@@ -1,4 +1,4 @@
-(function($) {
+(function($){
     $('.down-arrow').on('click', function(){
          $('html, body').animate({
             scrollTop: $(".clients").offset().top - 50

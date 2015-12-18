@@ -11,10 +11,10 @@ router.get('/', function(req, res, next) {
 	}
 	res.render('index', { title: 'Home', works:allworks });
 });
-router.get('/works', function(req, res, next) {
+router.get('/work', function(req, res, next) {
 	res.render('works/index', { title: 'Works', works:works });
 });
-router.get('/works/:work', function(req, res, next){
+router.get('/work/:work', function(req, res, next){
 	var work;
 	for(var i=0; i < works.length; i++ ){
 		if(req.params.work == works[i].title){

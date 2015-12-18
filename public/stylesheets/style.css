@@ -1,10 +1,10 @@
 @font-face {
 	font-family: 'icomoon';
-	src:url('../fonts/icomoon.eot?tyxd2v');
-	src:url('../fonts/icomoon.eot?tyxd2v#iefix') format('embedded-opentype'),
-		url('../fonts/icomoon.ttf?tyxd2v') format('truetype'),
-		url('../fonts/icomoon.woff?tyxd2v') format('woff'),
-		url('../fonts/icomoon.svg?tyxd2v#icomoon') format('svg');
+	src:url('../fonts/icomoon.eot?2aqlk9');
+	src:url('../fonts/icomoon.eot?2aqlk9#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?2aqlk9') format('truetype'),
+		url('../fonts/icomoon.woff?2aqlk9') format('woff'),
+		url('../fonts/icomoon.svg?2aqlk9#icomoon') format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
@@ -24,6 +24,12 @@
 	-moz-osx-font-smoothing: grayscale;
 }
 
+.icon-open:before {
+	content: "\e128";
+}
+.icon-ellipsis:before {
+	content: "\e129";
+}
 .icon-facebook:before {
 	content: "\e900";
 }
@@ -33,6 +39,7 @@
 .icon-linkedin2:before {
 	content: "\e902";
 }
+
 
 body{
 	overflow-x:hidden !important;
@@ -98,17 +105,20 @@ a:hover{
     padding: 1.5vw;
 }
 .square .content2 .label{
-	background: rgba(0,0,0,.6);
-    color: #fff;
-    padding: 7px;
-    margin: 11% 0;
-    box-shadow: -3px 2px 5px .5px rgba(99, 99, 99, 0.5);
-    font-size: 15px;
-    font-weight: 100;
-    border-radius: 0;
+	background: rgba(236,240,241,.5);
+	color: #7f8c8d;
+	padding: 7px;
+	margin: 11% 0;
+	box-shadow: -2px 1px 1px .5px rgba(99, 99, 99, 0.2);
+	font-size: 12px;
+	font-weight: 700;
+	border-radius: 0;
 }
-.square .content2 a:hover{
-    box-shadow: -3px 5px 10px .5px rgba(99, 99, 99, 0.5);
+.square .content2 .label.dark{
+	color: #2c3e50;
+}
+.square .content2 .label:hover{
+    box-shadow: -3px 3px 3px .5px rgba(99, 99, 99, 0.5);
 }
 .square.sp50 .content{
 	height: 50%;
@@ -213,6 +223,7 @@ a:hover{
 .navbar-default{
 	background: #fff;
 	border: 0;
+	z-index: 3;
 }
 .navbar-brand{
 	padding: 15px 0;
@@ -228,6 +239,29 @@ a:hover{
 .navbar-default .navbar-nav > li > a:hover,
 .navbar-default .navbar-nav > li.active > a{
 	background: #f3f3f3;
+}
+#navbar{
+	position: absolute;
+	right: 1px;
+}
+#navbar ul{
+	background-color: transparent;
+}
+.overlay{
+	width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: 4;
+    top: 1px;
+    background-color: rgba(255,255,255,.9);
+    transition: display .5s ease;
+}
+.navbar-toggle,
+#navbar{
+	z-index: 5
+}
+.hidescroll{
+	position: fixed; overflow-y:scroll
 }
 .banner{
 	position: absolute;
@@ -271,10 +305,6 @@ a:hover{
     display: block;
     padding: 1vw;
     width: 100%;
-}
-.works .single{
-	height: 70vh;
-    background-color: #fff;
 }
 .sub{
 	font-size: 23px;
@@ -372,6 +402,9 @@ h1{
 .mtop20{
 	margin-top: 20px;
 }
+.mtop50{
+	margin-top: 50px;
+}
 .mtop-100{
 	margin-top: -100px;
 }
@@ -383,52 +416,51 @@ h1{
 }
 
 @media(min-width:1px) {
- .navbar-header {
-    float: none;
-    margin-left: 2%;
-}
-.navbar-left,.navbar-right {
-    float: none !important;
-}
-.navbar-toggle {
-    display: block;
-}
-.navbar-collapse {
-    border-top: 1px solid transparent;
-    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
-}
-.navbar-fixed-top {
-    top: 0;
-    border-width: 0 0 1px;
-}
-.navbar-collapse.collapse {
-    display: none!important;
-}
-.navbar-nav {
-    float: none!important;
-    margin-top: 7.5px;
-}
-.navbar-nav>li {
-    float: none;
-}
-.navbar-nav>li>a {
-    padding-top: 10px;
-    padding-bottom: 10px;
-}
-.collapse.in{
-    display:block !important;
-}
-.navbar-default .navbar-toggle{
-	border:0;
-}
-.navbar-nav{
-	text-align: right;
-	z-index: 5;
-	background: #fff;
-	opacity: 1;
-
-}
-.navbar-default .navbar-collapse, .navbar-default .navbar-form{
-	border: none;
-}
+	.navbar-header {
+	    float: none;
+	    margin-left: 2%;
+	}
+	.navbar-left,.navbar-right {
+	    float: none !important;
+	}
+	.navbar-toggle {
+	    display: block;
+	}
+	.navbar-collapse {
+	    border-top: 1px solid transparent;
+	    box-shadow: inset 0 1px 0 rgba(255,255,255,0.1);
+	}
+	.navbar-fixed-top {
+	    top: 0;
+	    border-width: 0 0 1px;
+	}
+	.navbar-collapse.collapse {
+	    display: none!important;
+	}
+	.navbar-nav {
+	    float: none!important;
+	    margin-top: 7.5px;
+	}
+	.navbar-nav>li {
+	    float: none;
+	}
+	.navbar-nav>li>a {
+	    padding-top: 10px;
+	    padding-bottom: 10px;
+	}
+	.collapse.in{
+	    display:block !important;
+	}
+	.navbar-default .navbar-toggle{
+		border:0;
+	}
+	.navbar-nav{
+		text-align: right;
+		z-index: 5;
+		background: #fff;
+		opacity: 1;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+		border: none;
+	}
 }
