@@ -105,17 +105,18 @@ a:hover{
     padding: 1.5vw;
 }
 .square .content2 .label{
-	background: rgba(236,240,241,.5);
-	color: #7f8c8d;
+	background: rgba(236,240,241,.8);
+	color: #34495e;
 	padding: 7px;
 	margin: 11% 0;
 	box-shadow: -2px 1px 1px .5px rgba(99, 99, 99, 0.2);
-	font-size: 12px;
+	font-size: 13px;
 	font-weight: 700;
 	border-radius: 0;
 }
 .square .content2 .label.dark{
 	color: #2c3e50;
+	background: rgba(255,255,255,.6);
 }
 .square .content2 .label:hover{
     box-shadow: -3px 3px 3px .5px rgba(99, 99, 99, 0.5);
