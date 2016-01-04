@@ -349,6 +349,10 @@ a:hover{
 	color:#337ab7;
 	transition: all 1s ease;
 }
+.form-control{
+	border-radius: 0;
+	box-shadow: none;
+}
 .txt-w{
 	color: #fff;
 }
@@ -414,6 +418,9 @@ h1{
 }
 .pno{
 	padding: 0
+}
+.di{
+	display: inline;
 }
 
 @media(min-width:1px) {

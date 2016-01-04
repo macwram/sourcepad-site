@@ -1,0 +1,18 @@
+extends ../layout
+block css
+
+block content
+	.plr10.text-center
+		h2.fs3.pbtm40.ptop50 Career
+		p We take our work seriously, but keep things light. Our office is designed for high collaboration and we believe that good ideas can come from anyone, anytime. We are always looking for smart people to join the fun.
+		.mtop50 &nbsp;
+		each career, i in careers
+			.col-md-4
+				h3= career.title
+				.mtop &nbsp;
+				each job, i in career.jobs
+					p 
+						a(href="/career/"+job.slug)= job.title
+			
+
+block script

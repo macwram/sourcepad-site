@@ -1,0 +1,21 @@
+extends ../layout
+block css
+
+block content
+	.plr10.works
+		h2.text-left.fs3.pbtm40.ptop50
+			=career.title
+			br
+			.sub.mtop20.fw400= location
+
+		p= career.description
+
+		h3.mtop50 Skills/Qualifications
+		ul
+		each q in career.qualifications
+			li= q
+
+		button.btn.btn-default.mtop50 Apply
+
+		
+block script
