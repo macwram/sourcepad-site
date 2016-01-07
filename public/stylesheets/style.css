@@ -71,6 +71,14 @@ a:hover{
 	flex-direction: column;
 	justify-content: center;
 }
+.loadingdiv2{
+	height:calc(60vh - 70px);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	background: #fbfbfb;
+	margin-bottom: 80px;
+}
 .square {
 	position: relative;
     box-shadow:0px 0px 0px 1.5vw #fff inset;
@@ -78,7 +86,7 @@ a:hover{
     background: no-repeat scroll center center / cover  rgba(0, 0, 0, 0);
     opacity: .9;
 	cursor: pointer;
-	transition: opacity .5s ease-in-out;
+	transition: opacity .9s ease-in-out;
 }
 .square:hover {
 	opacity: none;
@@ -110,7 +118,7 @@ a:hover{
 	padding: 7px;
 	margin: 11% 0;
 	box-shadow: -2px 1px 1px .5px rgba(99, 99, 99, 0.2);
-	font-size: 13px;
+	font-size: 15px;
 	font-weight: 700;
 	border-radius: 0;
 }
@@ -121,10 +129,19 @@ a:hover{
 .square .content2 .label:hover{
     box-shadow: -3px 3px 3px .5px rgba(99, 99, 99, 0.5);
 }
+.square .content2{
+	margin:85% 0 0 0;
+}
+.square.sp50 .content2{
+	margin:35% 0 0 0;
+}
+.square.s25 .content2{
+	margin:70% 0 0 0;
+}
 
 .gojee .label
 ,.cozi .label{
-	font-size: 10px !important;
+	/*font-size: 10px !important;*/
 }
 .square.sp50 .content{
 	height: 50%;

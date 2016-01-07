@@ -3,7 +3,6 @@ module.exports = [
 			title: 'niche'
 			,sub: 'Since 2008, we’ve built web and mobile applications for 100+ businesses.'
 			,label: 'Acquired: $30m (Twitter)'
-			,labelcolor: 'dark'
 			,size: 's50'
 			,name: 'Niche'
 			,screenshots: 2
@@ -23,7 +22,7 @@ module.exports = [
 		}
 		,{
 			title: 'cozi'
-			,label: 'VC raised $6m, Acquired by Time Inc.'
+			,label: 'Acquired by Time Inc.'
 			,size: 's25'
 			,name: 'Cozi'
 			,screenshots: 3
@@ -34,7 +33,7 @@ module.exports = [
 		,{
 			title: 'gojee'
 			,size: 's25'
-			,label: 'VC raised $4m, Acquired by XODigital'
+			,label: 'Acquired by XODigital'
 			,name: 'Gojee'
 			,screenshots: 3
 			,link: 'gojee.com'

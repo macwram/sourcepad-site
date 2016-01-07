@@ -1,6 +1,6 @@
 .th{
 	opacity: 0;
-	transition:opacity 2.5s linear;
+	transition:opacity 1.5s linear;
 }
 #load{
 	transition:none;
