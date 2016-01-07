@@ -121,6 +121,11 @@ a:hover{
 .square .content2 .label:hover{
     box-shadow: -3px 3px 3px .5px rgba(99, 99, 99, 0.5);
 }
+
+.gojee .label
+,.cozi .label{
+	font-size: 10px !important;
+}
 .square.sp50 .content{
 	height: 50%;
 	margin-top: 25%;
@@ -164,7 +169,13 @@ a:hover{
 .flexport{
 	background-image: url('/images/flexport.png')
 }
+.gojee{
+	background-image: url('/images/gojee.png')
+}
 .museum{
+	background-color: #fbfbfb;
+}
+.cozi{
 	background-color: #fbfbfb;
 }
 .eneighbr{
@@ -362,8 +373,14 @@ h1{
 .fw400{
 	font-weight: 400;
 }
+.fw300{
+	font-weight: 300;
+}
 .fs5{
 	font-size: 5vw;
+}
+.fs4{
+	font-size: 3.5vw;
 }
 .fs3{
 	font-size: 3vw;

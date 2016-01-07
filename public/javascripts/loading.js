@@ -40,7 +40,7 @@ function done(){
 		}
 		
 		bo.overflow = 'scroll'
-	}, 1200);
+	}, 600);
 }
 function init(){
 	window.onbeforeunload = function(){

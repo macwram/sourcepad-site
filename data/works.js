@@ -22,21 +22,22 @@ module.exports = [
 			,main: 1
 		}
 		,{
-			title: 'museum'
-			,label: 'VC raised $7m'
+			title: 'cozi'
+			,label: 'VC raised $6m, Acquired by Time Inc.'
 			,size: 's25'
-			,name: '1000 Museums'
+			,name: 'Cozi'
 			,screenshots: 3
-			,link: '1000museums.co'
+			,link: 'cozi.com'
 			,type: 1
 			,main: 1
 		}
 		,{
-			title: 'eneighbr'
+			title: 'gojee'
 			,size: 's25'
-			,name: 'eNeighbr'
+			,label: 'VC raised $4m, Acquired by XODigital'
+			,name: 'Gojee'
 			,screenshots: 3
-			,link: 'eneighbr.com'
+			,link: 'gojee.com'
 			,type: 1
 			,main: 1
 		}
@@ -63,11 +64,21 @@ module.exports = [
 			,main: 1
 		}
 		,{
-			title: 'wizpert'
+			title: 'eneighbr'
 			,size: 's25'
-			,name: 'Wizpert'
+			,name: 'eNeighbr'
 			,screenshots: 3
-			,link: 'wizpert.com'
+			,link: 'eneighbr.com'
+			,type: 1
+			,main: 1
+		}
+		,{
+			title: 'museum'
+			,label: 'VC raised $7m'
+			,size: 's25'
+			,name: '1000 Museums'
+			,screenshots: 3
+			,link: '1000museums.co'
 			,type: 1
 			,main: 1
 		}
@@ -78,7 +89,16 @@ module.exports = [
 			,screenshots: 3
 			,link: 'tengrade.com'
 			,type: 1
-			,main: 1
+			,main: 0
+		}
+		,{
+			title: 'wizpert'
+			,size: 's25'
+			,name: 'Wizpert'
+			,screenshots: 3
+			,link: 'wizpert.com'
+			,type: 1
+			,main: 0
 		}
 		,{
 			title: 'quotiful'

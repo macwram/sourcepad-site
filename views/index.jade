@@ -20,8 +20,18 @@ block content
 	.row.text-center.th.mtop-100.col-md-12
 		a.down-arrow.bounce ^
 	.row
+		.loadingdiv
+			h2.text-center.fs4
+				| Built for Entrepreneurs,
+				br
+				| by entrepreneurs.
+			h3.text-center.sub
+				| Our founders have created 4 companies,
+				br
+				| raised $20 million and had 2 exits.
+	.row
 		.portfolio.ptop100.th.col-md-offset-1.col-md-10
-			h2.text-center.fs3.pbtm40.row.clients We work with great clients
+			h2.text-center.fs4.pbtm40.row.clients Our clients are reshaping the world.
 			each work, i in works
 				.square(class=work.size + ' ' + work.title)
 					a(href="work/"+work.title)
@@ -35,7 +45,7 @@ block content
 			.row.text-center.ptop100.pbtm60
 				a.btn.btn-default.btn-md(href="/work") View More
 	.news.th.ptop100
-		h2.text-center.fs3.pbtm40.row Latest News
+		h2.text-center.fs4.pbtm40.row Latest News
 		.new.pbtm40.col-md-10.col-md-offset-1
 			.title.pbtm10.fw400
 				a(href="#") Plum Alley's CEO (SourcePad client) named a Gamechanger
