@@ -24,6 +24,26 @@ router.get('/work/:work', function(req, res, next){
 	}
 	res.render('works/show', { title:work.name ,work: work });
 });
+router.post('/navigatework/:type/:work', function(req, res, next){
+	var work;
+	var type = (req.params.type == 'next') ? 1 : -1; 
+	for(var w in works){
+		if(req.params.work == works[w].title){
+			work = works[parseInt(w)+type]
+			if(!work){
+
+				if(type > 0){
+					console.log(type)
+					work = works[0]
+				}else{
+					work = works[works.length-1]
+					console.log(works.length)
+				}
+			}
+		}
+	}
+	return res.send(work)
+});
 router.get('/about', function(req, res, next) {
 	res.render('about', { title: 'About' });
 });
