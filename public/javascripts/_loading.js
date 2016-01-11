@@ -1,4 +1,3 @@
-
 function replaceAt(s, n, t){
     return s.substring(0, n) + t + s.substring(n + 1);
 }
@@ -95,8 +94,4 @@ function init(){
 	}, 3000);
 }
 init();
-
-
-// should me moved to another page
-
 

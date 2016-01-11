@@ -193,7 +193,12 @@ a:hover{
 	background-color: #fbfbfb;
 }
 .cozi{
-	background-color: #fbfbfb;
+	background-image: url('/images/tengrade.png');
+	background-repeat: repeat;
+	background-size: auto;
+}
+.cozi .content{
+	margin-top: 30% !important;
 }
 .eneighbr{
 	background-image: url('/images/eneighbr.png');
@@ -204,9 +209,8 @@ a:hover{
 	background-color: #a2a2a2
 }
 .tengrade{
-	background-repeat: repeat;
-	background-size: auto;
-	background-image: url('/images/tengrade.png')
+	
+	
 }
 .s50{
 	width: 50%;

@@ -21,22 +21,22 @@ module.exports = [
 			,main: 1
 		}
 		,{
+			title: 'museum'
+			,label: 'VC raised $7m'
+			,size: 's25'
+			,name: '1000 Museums'
+			,screenshots: 3
+			,link: '1000museums.co'
+			,type: 1
+			,main: 1
+		}
+		,{
 			title: 'cozi'
 			,label: 'Acquired by Time Inc.'
 			,size: 's25'
 			,name: 'Cozi'
 			,screenshots: 3
 			,link: 'cozi.com'
-			,type: 1
-			,main: 1
-		}
-		,{
-			title: 'gojee'
-			,size: 's25'
-			,label: 'Acquired by XODigital'
-			,name: 'Gojee'
-			,screenshots: 3
-			,link: 'gojee.com'
 			,type: 1
 			,main: 1
 		}
@@ -72,12 +72,12 @@ module.exports = [
 			,main: 1
 		}
 		,{
-			title: 'museum'
-			,label: 'VC raised $7m'
+			title: 'gojee'
 			,size: 's25'
-			,name: '1000 Museums'
+			,label: 'Acquired by XODigital'
+			,name: 'Gojee'
 			,screenshots: 3
-			,link: '1000museums.co'
+			,link: 'gojee.com'
 			,type: 1
 			,main: 1
 		}
